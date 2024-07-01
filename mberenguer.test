@@ -1,0 +1,97 @@
+SYSTEM
+	Question 1:	Dans un terminal (BASH), vous tapez ka commande: ps -ef | grep ssh pour
+				- lister les fichies de votre répertoire HOME ?
+				- Connaitre les utilisateurs connectés à votre session
+				- lister les processus actifs puis filtrer la recherche
+				- avoir un état de lieux de l'utilisation mémoire
+
+		ps -ef:
+			ps displays information about a selection of the active processes.
+			-e : Select all processes.  Identical to -A.
+			-f : Do  full-format  listing.
+			
+		grep ssh:
+			grep searches for patterns in file
+
+		-> en prenant en pipe la sortie de la commande ps -ef grep cherche pour la/les lignes contenant ssh.
+		Donc, Lister les processus actifs puis filtrer la recherche et Connaitre les utilisateurs connectés (par ssh)
+
+		Autres commandes:
+		-> netstat
+		-> ss
+
+	Question 2:
+		ifconfig
+
+	Question 3:
+		type1 (bare-metal) : performance et efficacité
+			-data center
+			-cloud computing
+
+		type2 (hosted) : simplicité et flexibilité
+			-environnement de test
+			-malware analysis
+			-reverse engineering
+			-kernel development
+			-proxy
+			-different os
+			...etc
+
+
+RESEAU
+	Question 1:	Quels protocoles connaissez vous ?
+			Pouvez vous les classer par types et dire lesquels représentent un enjeu de sécurité ?
+		
+		Enjeux de sécurité:
+			HTTPS (HyperText Transfer Protocol Secure)
+			SSH (Secure Shell)
+			SSL (Secure Sockets Layer)
+			IPsec (Internet Protocol Security)
+			SMTP (Simple Mail Transfer Protocol) - Souvent ciblé pour les attaques de phishing et de spam.
+			FTP (File Transfer Protocol)
+			SFTP (Secure File Transfer Protocol)
+			Telnet - Non sécurisé, peut être remplacé par SSH.
+			DNS (Domain Name System) - Vulnérable aux attaques de type DNS spoofing ou DDoS.
+			HTTP (HyperText Transfer Protocol) - Non sécurisé
+		Autres:
+			TCP (Transmission Control Protocol)
+			IP (Internet Protocol)
+			UDP (User Datagram Protocol)
+			NTP (Network Time Protocol)
+			IRC (Internet Relay Chat)
+		
+		
+
+	Question 2:	Sur quelle couche du modele OSI va travailler
+		commutateur (switch):	data link layer		-> couche 2
+		routeur:		network layer		-> couche 3
+		protocole tcp:		trasport		-> couche 4
+		http:			application		-> couche 7
+
+	Question 3:	Quel de ces types va utiliser le serveur DNS donner l'addresse d'un serveur ?
+		A record	-> IPv4 address
+		AAAA record	-> IPv6 address
+
+	Question 4:	Pendant le handshake de connexion TCP, quels messages sont envoyés ?
+		SYN et ACK
+			| SYN
+			| SYN-ACK
+			| ACK
+		        \/
+
+
+SECURITE
+	Question 1:	Existe t il une norme pour la sécurité informatique ?
+		ISO 27001
+
+	Question 2:	Concernant la sécurité, quelles institutions/agences pouvez vous citer pour la France? A l'international?
+		france: ANSSI - CNIL
+		international: CISA - Interpole
+
+	Question 4:	Avec votre usage habituel du numérique (PC, Tablette, Téléphone), quels sont les moments ou vous êtes vulnérable
+			Quels pourraient en être les conséquences ?
+			Qui d'autre pourrait être impacté d'une faille de sécurité chez vous (ou dans votre entreprise) ?
+
+		vulnerables : telechargement, mail - phishing, point d'acces publique, navigation site louche - suivre des liens inconnus sur forums et/ou reseaux sociaux.
+		consequences : malware, vol de données, impersonnalisation.
+		qui d'autre ?: toutes personne ayant accès à mon réseaux et toutes personnes étant sur un réseaux auquel j'ai accès.
